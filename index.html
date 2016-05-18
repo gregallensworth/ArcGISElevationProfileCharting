@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>Elevation Charting Demo</title>
+
+    <!-- ArcGIS JS API and related CSS -->
+    <link rel="stylesheet" href="http://js.arcgis.com/3.8/js/dojo/dijit/themes/claro/claro.css"> 
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.8/js/esri/css/esri.css">
+    <script src="//js.arcgis.com/3.8/"></script>
+
+    <!-- jQuery; needed for HighCharts but we prefer it over Dojo for virtually everything -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+
+    <!-- HighCharts chart library -->
+    <script language="javascript" type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+
+    <!-- the code to glue it all together, awww yeah! -->
+    <script type="text/javascript" src="index.js"></script>
+    <style type="text/css">
+    body {
+        width:7in;
+    }
+    #map {
+        width:5in;
+        height:5in;
+        border:1px solid black;
+        margin:1em auto 0 auto;
+    }
+    #elevationgraph {
+        width:5in;
+        height:2in;
+        margin:0 auto 0 auto;
+    }
+    #trail_name {
+        margin:1em auto 0 auto;
+        text-align:center;
+    }
+    </style>
+</head>
+<body class="claro">
+
+    <p>
+        This demo uses ESRI's elevation service and Highcharts, to create very cool elevation profiles.
+        <br/>
+        Note that some of the trails are <i>very</i> long and may not process quickly.
+    </p>
+    <p>
+        Basemap is provided by ESRI
+        <br/>
+        Trails data by Pitkin County, Colorado
+    </p>
+    <p>
+        References:
+        <ul>
+            <li><a target="_blank" href="http://sampleserver6.arcgisonline.com/arcgis/rest/services/Elevation/WorldElevations/MapServer/exts/ElevationsSOE_NET/ElevationLayers/0">http://sampleserver6.arcgisonline.com/arcgis/rest/services/Elevation/WorldElevations/MapServer/exts/ElevationsSOE_NET/ElevationLayers/0</a></li>
+            <li><a target="_blank" href="http://www.arcgis.com/apps/OnePane/basicviewer/profile.html?appid=13a3167e95134cdda5277c0b47fcd626">http://www.arcgis.com/apps/OnePane/basicviewer/profile.html?appid=13a3167e95134cdda5277c0b47fcd626</a></li>
+            <li><a target="_blank" href="http://www.arcgis.com/apps/ElevationsProfile/index.html">http://www.arcgis.com/apps/ElevationsProfile/index.html</a></li>
+        </ul>
+    </p>
+
+    <div id="map"></div>
+    <div id="trail_name"></div>
+    <div id="elevationgraph"></div>
+
+</div>
+
+
+</body>
+</html>
